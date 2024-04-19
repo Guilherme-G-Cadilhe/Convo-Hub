@@ -2,4 +2,4 @@ PSQL
 
 psql --host=localhost --username=postgres --port=5432
 
-docker compose -f infra/compose.yaml up
+docker compose -f infra/compose.yaml up -d
