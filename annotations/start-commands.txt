@@ -2,4 +2,15 @@ PSQL
 
 psql --host=localhost --username=postgres --port=5432
 
+// Cria instancia e faz setup
 docker compose -f infra/compose.yaml up -d
+// Pausa instancia
+docker compose -f infra/compose.yaml stop
+// Destroe instancia
+docker compose -f infra/compose.yaml down
+
+
+// Versão sem shortcut
+node-pg-migrate --migrations-dir infra/migrations create
+// Versão com shortcut
+node-pg-migrate -m infra/migrations create
