@@ -10,7 +10,18 @@ docker compose -f infra/compose.yaml stop
 docker compose -f infra/compose.yaml down
 
 
+MIGRATE
+
 // Versão sem shortcut
 node-pg-migrate --migrations-dir infra/migrations create
 // Versão com shortcut
 node-pg-migrate -m infra/migrations create
+
+TESTES
+
+// Especifica qual pasta de teste será rodada ( Para não rodar tudo sempre )
+npm run test:watch -- migrations (Todos os testes dentro)
+npm run test:watch -- migrations.post (Nome do arquivo de teste especifico)
+
+// Executa os testes de forma Serial ( Um após o outro)
+jest --watchAll --runInBand

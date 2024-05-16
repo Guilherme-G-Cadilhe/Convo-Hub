@@ -12,8 +12,8 @@
     "lint:fix": "prettier --write .",
     "build": "next build",
     "start": "next start -p $PORT",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watchAll --runInBand",
     "test:watch:changes": "jest --watch",
     "migration:create": "node-pg-migrate -m infra/migrations create",
     "migration:up": "node-pg-migrate -m infra/migrations --envPath .env.development up"
