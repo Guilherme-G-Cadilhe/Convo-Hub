@@ -1,0 +1,40 @@
+Structure:
+<type>[optional scope]: <description>
+[optional body]
+[optional footer(s)]
+
+TYPE OF COMMITS
+-fix: a commit of the type fix patches a bug in your codebase 
+-feat: a commit of the type feat introduces a new feature to the codebase 
+-BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
+-docs: Changes related to Documentation
+-build: Changes related to build processes or tools.
+-chore: Regular maintenance or administrative tasks.
+-ci: Updates to the continuous integration setup.
+-docs: Documentation-related changes.
+-style: Changes that do not affect the code’s functionality (e.g., formatting).
+-refactor: Code modifications without changing its behavior.
+-perf: Performance improvements.
+-test: Adding or modifying tests.
+
+TYPE: TYPE OF COMMITS
+-scope: Short description of a section of the codebase enclosed in parenthesis followed by a colon and a space. Messages tend to be in the present and imperative.
+-description: Short description of the code changes
+-body: A longer description of the commit, providing additional context about the changes. Must be placed one empty line after the description.
+-footer: Fixes issue #3 //example.The footer should only contain additional issue references about the changes.
+
+
+[Examples]
+feat(homepage): Add carousel feature to showcase testimonials
+
+Implemented a carousel component on the homepage
+Added client testimonials section for improved user engagement
+
+Fixes #12
+
+
+More examples:
+
+feat: Add new rating component
+fix: Resolve issue with city search feature
+docs: Update README with new contribution guidelines
