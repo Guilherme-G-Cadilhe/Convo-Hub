@@ -25,6 +25,8 @@ dotenv = Variaveis de ambiente
 dotenv-expand = Permite interpolação de variáveis de ambiente.
 pg = Conector do Postgres
 node-pg-migrate = Permite fazer Migrate no Postgres
+concurrently = Permite executar comandos do sistema de forma concorrente
+async-retry = Chamadas Async com Retry automatico simples
 
 === Cloud ===
 Projeto hospedado na Vercel
@@ -40,4 +42,4 @@ Postgres hospedado no Neon
 - Deploy em Cloud tanto do banco, quanto do servidor
 - Configuração em cloud para validação e deploy automatico do servidor na Vercel
 - Branchs de Homologação e Produção, com seus deploys individuais a cada Git Push para seus devidos ambientes de homologação ou produção com base na Branch e env
-- CI/CD Devops
+- Orquestrador para subir ecosistema inteiro com uma unica linha de comando, subindo banco, migrate, servidor web e testes com o jest

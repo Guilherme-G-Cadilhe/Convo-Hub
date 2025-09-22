@@ -1,7 +1,7 @@
 const { exec } = require("node:child_process") // Permite executar comandos externos
 
 function checkPostgres() {
-  // Verifica se o postgres esta pronto e se a conexão TCP IP estiver aberta
+  // Verifica se o postgres esta pronto e troca a porta para tcp ip
   exec('docker exec postgres-dev pg_isready --host localhost', handleReturn)
 
   function handleReturn(error, stdout, stderr) {

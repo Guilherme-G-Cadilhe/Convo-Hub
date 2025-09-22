@@ -79,7 +79,10 @@ Deletar Branch que já fez merge
 Forçar deleção de Branch que não fez merge
 > git branch -d nomeBranch
 
-[MERGE]
+[MERGE E COMMIT]
 Fast Fowards merge simples apartir do HEAD na Branch main/principal
 > git merge nomeBranchAlvo
+
+Comando do Git usado para modificar o commit mais recente
+> git commit --amend
 
