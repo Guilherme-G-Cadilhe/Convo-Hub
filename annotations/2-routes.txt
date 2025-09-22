@@ -1,6 +1,13 @@
-curl https://convo-hub.vercel.app/api/v1/migrations //GET
-curl -X POST https://convo-hub.vercel.app/api/v1/migrations //POST
-curl http://localhost:3000/api/v1/migrations
+curl https://convo-hub.vercel.app/api/v1/migrations // GET
+curl -X POST https://convo-hub.vercel.app/api/v1/migrations // POST
+curl http://localhost:3000/api/v1/migrations // GET
+
+curl -s https://convo-hub.vercel.app/api/v1/status | python3 -m json.tool
+- Operador '|' significa Pipe ou Cano, ele redireciona o Output e injeta no comando seguinte
+- python3 é um modulo que vem por padrão no CodeSpace que pode rodar scripts em linha de comando
+- '-m json.tool' está chamando um formatador de JSON e passando o output do CURL para ele
+- '-s' é o padrão curl para fazer ele vir "silencioso" e trazer só detalhes da resposta
+
 
 POST - /api/v1/migrations
 -> Aciona Migrate up (direto no banco)
