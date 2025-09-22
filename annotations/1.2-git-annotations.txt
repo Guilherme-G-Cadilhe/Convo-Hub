@@ -35,6 +35,15 @@ Faz download das alterações da sua branch
 Mostra o historico de alterações dessa branch
 > git log
 
+Log com Gráficos da linha do tempo a esquerda
+> git log --graph
+
+Mostra o historico de alterações e referencias no repositorio do git
+> git reflog
+(Util para obter o Hash de Branchs deletadas e perdidas para serem recuperadas)
+> git reflog | grep 'mensagem do commit'
+(grep é um comando que busca dentro de um texto, determinado padrão de string e retorna a linha em que ele aparece)
+
 Tecla para sair do terminal do Git que utilize pagers (git log)
 > q
 
@@ -58,6 +67,9 @@ Troca de Branchs (Versão antiga)
 Cria uma nova Branch, bifurcando da sua branch atual e levando seu código não commitado para ele
 > git checkout -b nomeNovaBranch
 
+Cria uma nova Branch, utilizando como base o hash de outro commit
+> git checkout -b nomeNovaBranch 11c5d5s65
+
 Sobe a nova branch no repositorio de origem
 > git push --set-upstream origin suabranch (set-upstream é para ligar sua branch local com a nova criada)
 
@@ -67,4 +79,7 @@ Deletar Branch que já fez merge
 Forçar deleção de Branch que não fez merge
 > git branch -d nomeBranch
 
+[MERGE]
+Fast Fowards merge simples apartir do HEAD na Branch main/principal
+> git merge nomeBranchAlvo
 
