@@ -1,17 +1,17 @@
-Três níveis de compreensão de Branchs:
+=== Como funciona novas Branchs e o HEAD ===
+1 - Git cria Blobs que armazenam as modificações de cada commit, elas são apontadas para uma branch
+2 - Primeiro os commits apontam para um objeto de árvore, e então para os blobs
+3 - Commits apontam para uma Branch, a branch é como se fosse um 'apelido' para um commit
+4 - Para o Git saber onde você está no meio de diversas branchs e commits, ele olha para um commit em especifico através de um ponteiro chamado HEAD
+5 - O HEAD aponta para o Objeto da Branch, e o objeto da branch aponta para um commit o HASH dele #
+ (Exemplo no arquivo .git/head -> refs/heads/sua-branch-atual)
+ (Exemplo Hash .git/refs/heads/sua-branch-atual -> 5b224e32068083719930d16cda11be6ef37af3d9)
+6 - Ao criar uma nova branch, ele apenas move o HEAD para o novo apelido (branch) do commit original
+7 - Ao fazer um novo commit nessa nova branch, ele carrega o HEAD junto
+8 - Se quiser mover o HEAD para checar qualquer commit do passado, de qualquer alteração é só fazer um Checkout usando o HASH daquele commit
+9 - O HEAD é um ponteiro que dependendo de onde você colocar, ele mostra algo diferente.
 
-[1]
-
-
-
-[2]
-
-
-
-[3]
-
-
-=== Comannds ===
+=== Commands ===
 Verifica todos os arquivos com alterações e qual status da sua branch
 > git status
 
@@ -27,13 +27,27 @@ Faz upload das alterações para a sua branch
 Faz download das alterações da sua branch
 > git pull
 
+Mostra quais foram as linhas modificadas entre arquivos alterados
+> git diff
+
 Verifica qual sua Branch existem no sistema e em qual você está (*)
 > git branch
 
+Cria uma nova Branch
+> git branch novaBranch
+
+Troca de Branchs (Versão moderna)
+> git switch nomeBranch
+
+Troca de Branchs (Versão antiga)
+> git checkout nomeBranch
+
 Cria uma nova Branch, bifurcando da sua branch atual e levando seu código não commitado para ele
+> git checkout -b nomeNovaBranch
 
 Mostra o historico de alterações dessa branch
 > git log
 
 Tecla para sair do terminal do Git que utilize pagers (git log)
 > q
+
