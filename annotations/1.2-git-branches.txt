@@ -34,3 +34,6 @@ Cria uma nova Branch, bifurcando da sua branch atual e levando seu código não 
 
 Mostra o historico de alterações dessa branch
 > git log
+
+Tecla para sair do terminal do Git que utilize pagers (git log)
+> q
