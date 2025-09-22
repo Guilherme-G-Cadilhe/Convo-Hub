@@ -1,0 +1,41 @@
+📦 root
+┣ 📂 pages
+┃ ┗ 📜 index.js
+┣ 📂 api
+┃ ┗ 📂 v1 (Rotas de API)
+┣ 📂 models
+┃ ┣ 📜 user.js
+┃ ┣ 📜 content.js
+┃ ┗ 📜 password.js
+┣ 📂 infra
+┃ ┗ 📜 database.js
+┃ ┗ 📜 compose.yaml
+┃ ┣ 📂 migrations
+┃ ┣ 📂 provisioning
+┃ ┃ ┣ 📂 staging
+┃ ┃ ┣ 📂 production
+┣ 📂 tests
+
+
+=== Bibliotecas ===
+Prettier = Para estilização padronizada de código
+Reactjs e Dom = Para manipular página web
+Nextjs = Para encapsular o React
+dotenv = Variaveis de ambiente
+dotenv-expand = Permite interpolação de variáveis de ambiente.
+pg = Conector do Postgres
+node-pg-migrate = Permite fazer Migrate no Postgres
+
+=== Cloud ===
+Projeto hospedado na Vercel
+Postgres hospedado no Neon
+
+
+=== Features ===
+- Docker compose para serviços locais
+- Testes de integração com Jest
+- API de Status do servidor
+- Configuração de Migração UP de banco de dados via API
+- Deploy em Cloud tanto do banco, quanto do servidor
+- Configuração em cloud para validação e deploy automatico do servidor na Vercel
+- Branchs de Homologação e Produção, com seus deploys individuais a cada Git Push para seus devidos ambientes de homologação ou produção com base na Branch

@@ -1,0 +1,9 @@
+curl https://convo-hub.vercel.app/api/v1/migrations //GET
+curl -X POST https://convo-hub.vercel.app/api/v1/migrations //POST
+curl http://localhost:3000/api/v1/migrations
+
+POST - /api/v1/migrations
+-> Aciona Migrate up (direto no banco)
+
+GET - /api/v1/migrations
+-> Aciona Migrate up com Dryrun (sem ser direto no banco)

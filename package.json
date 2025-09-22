@@ -1,7 +1,7 @@
 {
   "name": "convo-hub",
   "version": "1.0.0",
-  "description": "A place to share ideas and inspire people.  A Project based on TabNews",
+  "description": "Full Modern plataform enterprise production ready course. A Project based on TabNews from Curso.dev",
   "main": "index.js",
   "scripts": {
     "dev": "npm run services:up && next dev",

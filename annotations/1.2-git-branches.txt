@@ -1,0 +1,36 @@
+Três níveis de compreensão de Branchs:
+
+[1]
+
+
+
+[2]
+
+
+
+[3]
+
+
+=== Comannds ===
+Verifica todos os arquivos com alterações e qual status da sua branch
+> git status
+
+Adiciona todos arquivos com alterações para staging
+> git add -A
+
+Faz commit dos arquivos em staging, adicionando uma mensagem
+> git commit -m "Mensagem"
+
+Faz upload das alterações para a sua branch
+> git push
+
+Faz download das alterações da sua branch
+> git pull
+
+Verifica qual sua Branch existem no sistema e em qual você está (*)
+> git branch
+
+Cria uma nova Branch, bifurcando da sua branch atual e levando seu código não commitado para ele
+
+Mostra o historico de alterações dessa branch
+> git log

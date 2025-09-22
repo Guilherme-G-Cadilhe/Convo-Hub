@@ -1,3 +1,3 @@
 # Convo-Hub
 
-A place to share ideas and inspire people. A Project based on TabNews
+Full Modern plataform enterprise production ready course. A Project based on TabNews from Curso.dev
