@@ -8,9 +8,12 @@ curl -s https://convo-hub.vercel.app/api/v1/status | python3 -m json.tool
 - '-m json.tool' está chamando um formatador de JSON e passando o output do CURL para ele
 - '-s' é o padrão curl para fazer ele vir "silencioso" e trazer só detalhes da resposta
 
+watch -n 1 'curl -s https://convo-hub.vercel.app/api/v1/status'
+- Watch faz com que ele fique "escutando" e mandando requisição nesse curl a cada segundo para sempre.
+
 
 POST - /api/v1/migrations
--> Aciona Migrate up (direto no banco)
+-> Executa migrações, aciona Migrate up
 
 GET - /api/v1/migrations
--> Aciona Migrate up com Dryrun (sem ser direto no banco)
+-> Consulta migrações disponiveis
