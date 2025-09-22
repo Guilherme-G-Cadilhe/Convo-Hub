@@ -8,6 +8,8 @@ docker compose -f infra/compose.yaml up -d
 docker compose -f infra/compose.yaml stop
 // Destroe instancia
 docker compose -f infra/compose.yaml down
+// Testa se está ready
+docker exec postgres-dev pg_isready
 
 
 MIGRATE
