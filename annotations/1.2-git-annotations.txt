@@ -61,4 +61,10 @@ Cria uma nova Branch, bifurcando da sua branch atual e levando seu código não 
 Sobe a nova branch no repositorio de origem
 > git push --set-upstream origin suabranch (set-upstream é para ligar sua branch local com a nova criada)
 
+Deletar Branch que já fez merge
+> git branch -d nomeBranch
+
+Forçar deleção de Branch que não fez merge
+> git branch -d nomeBranch
+
 
