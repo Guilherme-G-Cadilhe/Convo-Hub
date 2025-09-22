@@ -32,6 +32,7 @@ Postgres hospedado no Neon
 
 
 === Features ===
+- Sistema API First
 - Docker compose para serviços locais
 - Testes de integração com Jest
 - API de Status do servidor

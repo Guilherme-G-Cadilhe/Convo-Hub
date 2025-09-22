@@ -11,7 +11,9 @@
 8 - Se quiser mover o HEAD para checar qualquer commit do passado, de qualquer alteração é só fazer um Checkout usando o HASH daquele commit
 9 - O HEAD é um ponteiro que dependendo de onde você colocar, ele mostra algo diferente.
 
-=== Commands ===
+=== Commandos do git ===
+
+[FLUXO PADRÃO]
 Verifica todos os arquivos com alterações e qual status da sua branch
 > git status
 
@@ -27,9 +29,20 @@ Faz upload das alterações para a sua branch
 Faz download das alterações da sua branch
 > git pull
 
+
+
+[LOGS E ALTERAÇÕES]
+Mostra o historico de alterações dessa branch
+> git log
+
+Tecla para sair do terminal do Git que utilize pagers (git log)
+> q
+
 Mostra quais foram as linhas modificadas entre arquivos alterados
 > git diff
 
+
+[BRANCHS]
 Verifica qual sua Branch existem no sistema e em qual você está (*)
 > git branch
 
@@ -48,9 +61,4 @@ Cria uma nova Branch, bifurcando da sua branch atual e levando seu código não 
 Sobe a nova branch no repositorio de origem
 > git push --set-upstream origin suabranch (set-upstream é para ligar sua branch local com a nova criada)
 
-Mostra o historico de alterações dessa branch
-> git log
-
-Tecla para sair do terminal do Git que utilize pagers (git log)
-> q
 
