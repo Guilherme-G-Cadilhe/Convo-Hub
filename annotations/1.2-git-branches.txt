@@ -45,6 +45,9 @@ Troca de Branchs (Versão antiga)
 Cria uma nova Branch, bifurcando da sua branch atual e levando seu código não commitado para ele
 > git checkout -b nomeNovaBranch
 
+Sobe a nova branch no repositorio de origem
+> git push --set-upstream origin suabranch (set-upstream é para ligar sua branch local com a nova criada)
+
 Mostra o historico de alterações dessa branch
 > git log
 

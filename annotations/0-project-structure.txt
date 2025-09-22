@@ -38,4 +38,4 @@ Postgres hospedado no Neon
 - Configuração de Migração UP de banco de dados via API
 - Deploy em Cloud tanto do banco, quanto do servidor
 - Configuração em cloud para validação e deploy automatico do servidor na Vercel
-- Branchs de Homologação e Produção, com seus deploys individuais a cada Git Push para seus devidos ambientes de homologação ou produção com base na Branch
+- Branchs de Homologação e Produção, com seus deploys individuais a cada Git Push para seus devidos ambientes de homologação ou produção com base na Branch e env
