@@ -1,29 +1,35 @@
-PSQL
+MISC
+// Mostra o código de execução do último processo rodado
+> echo $?
 
+// Mostra o tempo percorrido para rodar um comando
+> time npm run test
+
+PSQL
 psql --host=localhost --username=postgres --port=5432
 
 // Cria instancia e faz setup
-docker compose -f infra/compose.yaml up -d
+> docker compose -f infra/compose.yaml up -d
 // Pausa instancia
-docker compose -f infra/compose.yaml stop
+> docker compose -f infra/compose.yaml stop
 // Destroe instancia
-docker compose -f infra/compose.yaml down
+> docker compose -f infra/compose.yaml down
 // Testa se está ready
-docker exec postgres-dev pg_isready
+> docker exec postgres-dev pg_isready
 
 
 MIGRATE
 
 // Versão sem shortcut
-node-pg-migrate --migrations-dir infra/migrations create
+> node-pg-migrate --migrations-dir infra/migrations create
 // Versão com shortcut
-node-pg-migrate -m infra/migrations create
+> node-pg-migrate -m infra/migrations create
 
 TESTES
 
 // Especifica qual pasta de teste será rodada ( Para não rodar tudo sempre )
-npm run test:watch -- migrations (Todos os testes dentro)
-npm run test:watch -- migrations.post (Nome do arquivo de teste especifico)
+> npm run test:watch -- migrations (Todos os testes dentro)
+> npm run test:watch -- migrations.post (Nome do arquivo de teste especifico)
 
 // Executa os testes de forma Serial ( Um após o outro)
-jest --watchAll --runInBand
+> jest --watchAll --runInBand
