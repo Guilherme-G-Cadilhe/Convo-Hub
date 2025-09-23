@@ -1,0 +1,22 @@
+name: Automated Linting
+
+on: pull_request
+
+jobs:
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout Repository para baixar o código do projeto
+        uses: actions/checkout@v4
+
+      - name: ⚙ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 📦 Install Dependencies com CI (Clean Install), instala exatamente o package-lock.json
+        run: npm ci
+
+      - name: Run Prettier
+        run: npm run lint:prettier:check
