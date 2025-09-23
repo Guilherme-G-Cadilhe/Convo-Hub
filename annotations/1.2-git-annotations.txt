@@ -89,3 +89,5 @@ Comando do Git usado para modificar o commit mais recente
 Comandos aninhados para modificar o commit mais recente
 > git add -A && git commit --amend --no-edit && git push -f
 
+Fazer alteração do commit sem ter modificação de arquivo
+> git commit --amend --date=now
