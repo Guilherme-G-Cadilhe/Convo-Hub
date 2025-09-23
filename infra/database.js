@@ -1,16 +1,16 @@
-import { Client } from 'pg';
+import { Client } from "pg";
 
 async function query(queryString) {
   let client;
   try {
-    client = await getNewClient()
-    const result = await client.query(queryString)
-    return result
+    client = await getNewClient();
+    const result = await client.query(queryString);
+    return result;
   } catch (err) {
     console.error(err);
-    throw err
+    throw err;
   } finally {
-    await client.end()
+    await client.end();
   }
 }
 
@@ -21,28 +21,28 @@ async function getNewClient() {
     database: process.env.POSTGRES_DB,
     user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
-    ssl: getSSLValues()
-  })
+    ssl: getSSLValues(),
+  });
   try {
-    await client.connect()
+    await client.connect();
     return client;
   } catch (err) {
     console.error(err);
-    await client.end()
-    throw err
+    await client.end();
+    throw err;
   }
 }
 
 export default {
   query,
-  getNewClient
-}
+  getNewClient,
+};
 
 function getSSLValues() {
   if (process.env.POSTGRES_CA) {
     return {
-      ca: process.env.POSTGRES_CA
-    }
+      ca: process.env.POSTGRES_CA,
+    };
   }
-  return process.env.NODE_ENV === 'production' ? true : false
+  return process.env.NODE_ENV === "production" ? true : false;
 }
