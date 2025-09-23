@@ -71,7 +71,13 @@ Cria uma nova Branch, utilizando como base o hash de outro commit
 > git checkout -b nomeNovaBranch 11c5d5s65
 
 Sobe a nova branch no repositorio de origem
+> git push  origin suabranch
+
+Sobe a nova branch no repositorio de origem e mantém conectado a referencia dela
 > git push --set-upstream origin suabranch (set-upstream é para ligar sua branch local com a nova criada)
+
+Sobe a nova branch com referencia abreviado
+> git push -U origin suabranch (set-upstream é para ligar sua branch local com a nova criada)
 
 Deletar Branch que já fez merge
 > git branch -d nomeBranch

@@ -4,7 +4,7 @@ function checkPostgres() {
   // Verifica se o postgres esta pronto e troca a porta para tcp ip
   exec("docker exec postgres-dev pg_isready --host localhost", handleReturn);
 
-  function handleReturn(error, stdout, stderr) {
+  function handleReturn(error, stdout) {
     // resultado do standard output (saída padrão)
     // Verifica se string contém "accepting connections"
     if (stdout.search("accepting connections") !== -1) {
