@@ -86,3 +86,6 @@ Fast Fowards merge simples apartir do HEAD na Branch main/principal
 Comando do Git usado para modificar o commit mais recente
 > git commit --amend
 
+Comandos aninhados para modificar o commit mais recente
+> git add -A && git commit --amend --no-edit && git push -f
+
