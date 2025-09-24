@@ -18,7 +18,10 @@
 
 
 === Bibliotecas ===
+CommitLint & conventionalCommits = Para padronização de commits estilo ConventionalCommits
+Eslint = Para qualidade de código
 Prettier = Para estilização padronizada de código
+Jest = Para testes
 Reactjs e Dom = Para manipular página web
 Nextjs = Para encapsular o React
 dotenv = Variaveis de ambiente
@@ -44,3 +47,4 @@ Postgres hospedado no Neon
 - Branchs de Homologação e Produção, com seus deploys individuais a cada Git Push para seus devidos ambientes de homologação ou produção com base na Branch e env
 - Orquestrador para subir ecosistema inteiro com uma unica linha de comando, subindo banco, migrate, servidor web e testes com o jest
 - Github Actions para automatizar Testes, Eslint e Prettier, com bloqueio de merge com base em sucesso de todas as verificações de actions
+- Hooks e Lints para padroniza e escrever Commits, junto com github Actions para verificar padrão de commit estilo conventionalcommits
