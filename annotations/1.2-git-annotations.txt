@@ -112,3 +112,7 @@ Se tiver conflitos, após resolver eles, continuar o rebase com:
 
 Ativa modo interativo do Rebase, permitindo escolher o que o rebase vai fazer, aplicar commit, reescrever commit, alterar arquivos, etc.
 > git rebase -i HEAD~2     (Volta dois commits atrás para usar como base)
+
+Fazer com que o commit ignore HOOKS de commit
+> git commit --no-verify
+> git commit -n
