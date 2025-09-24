@@ -2,6 +2,7 @@ import retry from "async-retry";
 
 async function waitForAllServices() {
   await waitForWebServer();
+  const AWS_SECRET = "AKIA1234567890ABCDEF"
 
   async function waitForWebServer() {
     return retry(fetchStatusPage, {
