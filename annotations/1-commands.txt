@@ -8,6 +8,9 @@ MISC
 // Faz search inverso para pesquisar os últimos comandos executados e conseguir achar com facilidade o historico do terminal
 > ctrl + r (escrever pedaço do texto / apertar ctrl + r novamente para ir voltando para todos os matches)
 
+// Testa o CommitLint usando o pipe (|)
+> echo "teste" | npx commitlint
+
 PSQL
 psql --host=localhost --username=postgres --port=5432
 
