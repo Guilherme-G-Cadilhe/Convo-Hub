@@ -50,6 +50,9 @@ Tecla para sair do terminal do Git que utilize pagers (git log)
 Mostra quais foram as linhas modificadas entre arquivos alterados
 > git diff
 
+Mostra as linhas modificadas no commit anterior com posição no numero de vezes passado ( no HEAD antigo) com o commit atual (HEAD novo)
+> git diff HEAD~1 HEAD
+
 
 [BRANCHS]
 Verifica qual sua Branch existem no sistema e em qual você está (*)
@@ -97,3 +100,15 @@ Comandos aninhados para modificar o commit mais recente
 
 Fazer alteração do commit sem ter modificação de arquivo
 > git commit --amend --date=now
+
+Troca o commit base de origem da sua branch atual por outra escolhida
+> git rebase branchEscolhida
+
+> Reverte a troca de commit base
+> git rebase --abort
+
+Se tiver conflitos, após resolver eles, continuar o rebase com:
+> git rebase --continue
+
+Ativa modo interativo do Rebase, permitindo escolher o que o rebase vai fazer, aplicar commit, reescrever commit, alterar arquivos, etc.
+> git rebase -i HEAD~2     (Volta dois commits atrás para usar como base)
