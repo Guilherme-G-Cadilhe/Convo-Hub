@@ -29,6 +29,9 @@ Faz upload das alterações para a sua branch
 Faz download das alterações da sua branch
 > git pull
 
+Descarta as Local Changes no diretorio de trabalho, voltando para a versão do ultimo commit ou o estado do Staging Area
+> git checkout --
+
 
 
 [LOGS E ALTERAÇÕES]
@@ -116,3 +119,6 @@ Ativa modo interativo do Rebase, permitindo escolher o que o rebase vai fazer, a
 Fazer com que o commit ignore HOOKS de commit
 > git commit --no-verify
 > git commit -n
+
+Descarta as Local Changes no diretorio de trabalho, voltando para a versão do ultimo commit ou o estado do Staging Area
+> git checkout --
