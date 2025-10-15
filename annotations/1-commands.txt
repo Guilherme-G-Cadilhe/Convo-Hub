@@ -11,6 +11,12 @@ MISC
 // Testa o CommitLint usando o pipe (|)
 > echo "teste" | npx commitlint
 
+// (package.json) Adiciona para rodar Scripts NPM Antes ou Depois de executar um Script especifico.
+/ "pretest" roda script antes de executar o "npm run test"
+/ "posttest" roda script depois (Script principal anterior precisa ser exit code 0) de executar o "npm run test"
+> "pre[scriptNpm]": ...scripts
+> "post[scriptNpm]": ...scripts
+
 PSQL
 psql --host=localhost --username=postgres --port=5432
 
